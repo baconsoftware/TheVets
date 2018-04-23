@@ -1,0 +1,99 @@
+﻿@model IEnumerable<TheVetsWebsite.Models.Animal>
+
+@{
+    ViewBag.Title = "test";
+}
+
+<h2>test</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.animaltype)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.breed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.minsize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.maxize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.minweight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.maxweight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.energylevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.temperament)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trainability)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lifespan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.goodwithkids)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.goodwithotheranimals)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.animaltype)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.breed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.minsize)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.maxize)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.minweight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.maxweight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.energylevel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.temperament)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trainability)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lifespan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.goodwithkids)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.goodwithotheranimals)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,13 @@
+﻿@model IEnumerable<TheVetsWebsite.Models.Animal>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<ul>
+    @foreach (var animal in Model)
+    {
+        <li>@animal.breed</li>
+    }
+</ul>
+
