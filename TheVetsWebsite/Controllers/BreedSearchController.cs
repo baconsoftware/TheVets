@@ -9,15 +9,22 @@ namespace TheVetsWebsite.Controllers
 {
     public class BreedSearchController : Controller
     {
-        // GET: BreedSearch
-        public ViewResult index()
+        private ApplicationDbContext _context;
+
+        public BreedSearchController()
         {
-            var animals = new List<Animal>
-            {
-                new Animal {breed = "Boston Terrier"},
-                new Animal {breed = "Labrador"},
-                new Animal {breed = "Jack Russel"}
-            };
+            _context = new ApplicationDbContext();
+        }
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
+        // GET: BreedSearch
+        public ViewResult Index()
+        {
+            var animals = _context.Animals;
+
             return View(animals);
         }
     }

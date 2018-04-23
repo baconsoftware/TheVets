@@ -9,13 +9,14 @@ namespace TheVetsWebsite.Models
     public class Animal
     {
         public int id { get; set; }
+        [DisplayName("Animal Type")]
         public string animaltype { get; set; }
         [DisplayName("Breed")]
         public string breed { get; set; }
         [DisplayName("Min Size (ft)")]
         public float minsize { get; set; }
         [DisplayName("Max Size (ft)")]
-        public float maxize { get; set; }
+        public float maxsize { get; set; }
         [DisplayName("Min Weight (lb)")]
         public float minweight { get; set; }
         [DisplayName("Max Weight (lb)")]
