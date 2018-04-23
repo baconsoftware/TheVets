@@ -64,8 +64,6 @@
     <script>
         $(document).ready(function () {
 
-            var vm = {};
-
             var animals = new Bloodhound({
                 datumTokenizer: Bloodhound.tokenizers.obj.whitespace('breed'),
                 queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -87,16 +85,16 @@
                     $('#animalInfo').removeAttr("style");
                     $('.animalType').text(animals.animaltype);
                     $('.breed').text(animals.breed);
-                    $('.minsize').text(animals.animaltype);
-                    $('.maxsize').text(animals.breed);
-                    $('.minweight').text(animals.animaltype);
-                    $('.maxweight').text(animals.breed);
-                    $('.energylevel').text(animals.animaltype);
-                    $('.temperament').text(animals.breed);
-                    $('.trainability').text(animals.breed);
-                    $('.lifespan').text(animals.animaltype);
-                    $('.goodwithkids').text(animals.breed);
-                    $('.goodwithotheranimals').text(animals.breed);
+                    $('.minsize').text(animals.minsize);
+                    $('.maxsize').text(animals.maxsize);
+                    $('.minweight').text(animals.minweight);
+                    $('.maxweight').text(animals.maxweight);
+                    $('.energylevel').text(animals.energylevel);
+                    $('.temperament').text(animals.temperament);
+                    $('.trainability').text(animals.trainability);
+                    $('.lifespan').text(animals.lifespan);
+                    $('.goodwithkids').text(animals.goodwithkids);
+                    $('.goodwithotheranimals').text(animals.goodwithotheranimals);
                 });
         });
     </script>
