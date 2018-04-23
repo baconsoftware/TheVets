@@ -19,8 +19,45 @@
         <label>Breed</label>
         <input id="breedSearchBox" type="text" value="" class="form-control" />
     </div>
-    <button class="btn btn-primary">Search</button>
 </form>
+<br />
+
+<div class="container-fluid" id="animalInfo" style="display:none">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(Model => Model.animaltype)</th>
+                <th>@Html.DisplayNameFor(Model => Model.breed)</th>
+                <th>@Html.DisplayNameFor(Model => Model.minsize)</th>
+                <th>@Html.DisplayNameFor(Model => Model.maxsize)</th>
+                <th>@Html.DisplayNameFor(Model => Model.minweight)</th>
+                <th>@Html.DisplayNameFor(Model => Model.maxweight)</th>
+                <th>@Html.DisplayNameFor(Model => Model.energylevel)</th>
+                <th>@Html.DisplayNameFor(Model => Model.temperament)</th>
+                <th>@Html.DisplayNameFor(Model => Model.trainability)</th>
+                <th>@Html.DisplayNameFor(Model => Model.lifespan)</th>
+                <th>@Html.DisplayNameFor(Model => Model.goodwithkids)</th>
+                <th>@Html.DisplayNameFor(Model => Model.goodwithotheranimals)</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="animalType"></td>
+                    <td class="breed"></td>
+                    <td class="minsize"></td>
+                    <td class="maxsize"></td>
+                    <td class="minweight"></td>
+                    <td class="maxweight"></td>
+                    <td class="energylevel"></td>
+                    <td class="temperament"></td>
+                    <td class="trainability"></td>
+                    <td class="lifespan"></td>
+                    <td class="goodwithkids"></td>
+                    <td class="goodwithotheranimals"></td>
+                </tr>
+        </tbody>
+    </table>
+</div>
 
 @section scripts
 {
@@ -46,8 +83,20 @@
                     name: 'animals',
                     display: 'breed',
                     source: animals
-                }).on("typeahead:select", function (e, customer) {
-                    vm.animalid = animal.id;
+                }).on("typeahead:select", function (e, animals) {
+                    $('#animalInfo').removeAttr("style");
+                    $('.animalType').text(animals.animaltype);
+                    $('.breed').text(animals.breed);
+                    $('.minsize').text(animals.animaltype);
+                    $('.maxsize').text(animals.breed);
+                    $('.minweight').text(animals.animaltype);
+                    $('.maxweight').text(animals.breed);
+                    $('.energylevel').text(animals.animaltype);
+                    $('.temperament').text(animals.breed);
+                    $('.trainability').text(animals.breed);
+                    $('.lifespan').text(animals.animaltype);
+                    $('.goodwithkids').text(animals.breed);
+                    $('.goodwithotheranimals').text(animals.breed);
                 });
         });
     </script>
