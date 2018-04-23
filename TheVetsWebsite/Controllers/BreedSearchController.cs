@@ -20,8 +20,14 @@ namespace TheVetsWebsite.Controllers
             _context.Dispose();
         }
 
+
+        public ActionResult Index()
+        {
+            return View();
+        }
+
         // GET: BreedSearch
-        public ViewResult Index()
+        public ViewResult AllAnimals()
         {
             var animals = _context.Animals;
 

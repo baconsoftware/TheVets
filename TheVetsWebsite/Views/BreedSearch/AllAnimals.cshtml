@@ -1,0 +1,46 @@
+﻿@model IEnumerable<TheVetsWebsite.Models.Animal>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>All Animals</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(Model => Model.animaltype)</th>
+            <th>@Html.DisplayNameFor(Model => Model.breed)</th>
+            <th>@Html.DisplayNameFor(Model => Model.minsize)</th>
+            <th>@Html.DisplayNameFor(Model => Model.maxsize)</th>
+            <th>@Html.DisplayNameFor(Model => Model.minweight)</th>
+            <th>@Html.DisplayNameFor(Model => Model.maxweight)</th>
+            <th>@Html.DisplayNameFor(Model => Model.energylevel)</th>
+            <th>@Html.DisplayNameFor(Model => Model.temperament)</th>
+            <th>@Html.DisplayNameFor(Model => Model.trainability)</th>
+            <th>@Html.DisplayNameFor(Model => Model.lifespan)</th>
+            <th>@Html.DisplayNameFor(Model => Model.goodwithkids)</th>
+            <th>@Html.DisplayNameFor(Model => Model.goodwithotheranimals)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var animal in Model)
+        {
+        <tr>
+
+            <td>@Html.DisplayFor(Modelitem => animal.animaltype)</td>
+            <td>@Html.DisplayFor(Modelitem => animal.breed)</td>
+            <td>@Html.DisplayFor(Modelitem => animal.minsize)</td>
+            <td>@Html.DisplayFor(Modelitem => animal.maxsize)</td>
+            <td>@Html.DisplayFor(Modelitem => animal.minweight)</td>
+            <td>@Html.DisplayFor(Modelitem => animal.maxweight)</td>
+            <td>@Html.DisplayFor(Modelitem => animal.energylevel)</td>
+            <td>@Html.DisplayFor(Modelitem => animal.temperament)</td>
+            <td>@Html.DisplayFor(Modelitem => animal.trainability)</td>
+            <td>@Html.DisplayFor(Modelitem => animal.lifespan)</td>
+            <td>@Html.DisplayFor(Modelitem => animal.goodwithkids)</td>
+            <td>@Html.DisplayFor(Modelitem => animal.goodwithotheranimals)</td>
+        </tr>
+        }
+    </tbody>
+</table>
