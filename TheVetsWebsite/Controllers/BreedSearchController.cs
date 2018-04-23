@@ -20,7 +20,6 @@ namespace TheVetsWebsite.Controllers
             _context.Dispose();
         }
 
-
         public ActionResult Index()
         {
             return View();

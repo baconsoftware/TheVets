@@ -24,7 +24,6 @@ namespace TheVetsWebsite.Controllers.Api
         }
 
         // GET /api/breedsearch/1
-
         public Animal GetAnimal(int id)
         {
             var animal = _context.Animals.SingleOrDefault(a => a.id == id);
