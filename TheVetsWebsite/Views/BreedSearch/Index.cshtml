@@ -6,10 +6,49 @@
 <h2>Breed Search</h2>
 <br />
 
-@using (Html.BeginForm("Search", "Animals"))
-{
+@*@using (Html.BeginForm("SelectedAnimal", "BreedSearch"))
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.breed)
+            @Html.TextBoxFor(m => m.breed, new { @class = "form-control" })
+        </div>
+    }*@
+
+<form>
     <div class="form-group">
-        @Html.LabelFor(m => m.breed)
-        @Html.TextBoxFor(m => m.breed, new { @class = "form-control" })
+        <label>Breed</label>
+        <input id="breedSearchBox" type="text" value="" class="form-control" />
     </div>
+    <button class="btn btn-primary">Search</button>
+</form>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+
+            var vm = {};
+
+            var animals = new Bloodhound({
+                datumTokenizer: Bloodhound.tokenizers.obj.whitespace('breed'),
+                queryTokenizer: Bloodhound.tokenizers.whitespace,
+                remote: {
+                    url: '/api/BreedSearchResults?query=%QUERY',
+                    wildcard: '%QUERY'
+                }
+            });
+
+            $('#breedSearchBox').typeahead({
+                minLength: 3,
+                highlight: true
+            },
+                {
+                    name: 'animals',
+                    display: 'breed',
+                    source: animals
+                }).on("typeahead:select", function (e, customer) {
+                    vm.animalid = animal.id;
+                });
+        });
+    </script>
 }
