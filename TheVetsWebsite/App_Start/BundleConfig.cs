@@ -10,6 +10,7 @@ namespace TheVetsWebsite
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js",
+                        "~/Scripts/rateyo.min.js",
                         "~/Scripts/typeahead.bundle.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
@@ -27,7 +28,8 @@ namespace TheVetsWebsite
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/typeahead.css"));
+                      "~/Content/typeahead.css",
+                      "~/Content/rateyo.min.css"));
         }
     }
 }

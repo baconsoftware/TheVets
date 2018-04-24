@@ -89,9 +89,9 @@
                     $('.maxsize').text(animals.maxsize);
                     $('.minweight').text(animals.minweight);
                     $('.maxweight').text(animals.maxweight);
-                    $('.energylevel').text(animals.energylevel);
+                    $('.energylevel').rateYo({ rating: animals.energylevel, readOnly: true, starWidth: "20px" });
                     $('.temperament').text(animals.temperament);
-                    $('.trainability').text(animals.trainability);
+                    $('.trainability').rateYo({ rating: animals.trainability, readOnly: true, starWidth: "20px" });
                     $('.lifespan').text(animals.lifespan);
                     $('.goodwithkids').text(animals.goodwithkids);
                     $('.goodwithotheranimals').text(animals.goodwithotheranimals);
