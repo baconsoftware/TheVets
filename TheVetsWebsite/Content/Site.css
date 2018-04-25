@@ -1,4 +1,13 @@
-﻿body {
+﻿/*Color Pallet
+
+    #726DA8 - purple
+    #7D8CC4 - dark pastel blue
+    #A0D2DB - pale cerulean
+    #BEE7E8 - powder blue
+    #F1FFFA - mint cream
+*/
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -7,6 +16,7 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    margin-top: 4rem;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -21,4 +31,64 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+
+.navbar {
+    min-height: 8rem;
+    background-color: #A0D2DB;
+    margin-bottom: 2rem;
+}
+
+.navbar-brand {
+    padding: 0 1rem;
+    height: 8rem;
+    line-height: 8rem;
+}
+
+.navbar-toggle {
+    /* (80px - button height 34px) / 2 = 23px */
+    margin-top: 2rem;
+    padding: 1.2rem 1.3rem !important;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav > li > a {
+        /* (80px - line-height of 27px) / 2 = 26.5px */
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        line-height: 3rem;
+    }
+}
+
+.navbar-nav > li > a {
+    color: antiquewhite;
+    font-size: large;
+}
+
+    .navbar-nav > li > a:hover {
+        background-color: #A0D2DB;
+        color: #333
+    }
+
+
+.page-title {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.form-group.breedSearchBox {
+    text-align: center;
+}
+
+    #breedSearchBox {
+        text-align: center;
+        max-width: 40rem;
+        width: 40rem;
+        height: 5rem;
+        font-size: x-large;
+    }
+
+.tt-menu {
+    width: 100% !important;
 }

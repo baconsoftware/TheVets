@@ -3,20 +3,11 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Breed Search</h2>
+<h2 class="page-title">Breed Search</h2>
 <br />
 
-@*@using (Html.BeginForm("SelectedAnimal", "BreedSearch"))
-    {
-        <div class="form-group">
-            @Html.LabelFor(m => m.breed)
-            @Html.TextBoxFor(m => m.breed, new { @class = "form-control" })
-        </div>
-    }*@
-
 <form>
-    <div class="form-group">
-        <label>Breed</label>
+    <div class="form-group breedSearchBox">
         <input id="breedSearchBox" type="text" value="" class="form-control" />
     </div>
 </form>
@@ -75,7 +66,8 @@
 
             $('#breedSearchBox').typeahead({
                 minLength: 3,
-                highlight: true
+                highlight: true,
+                hint: false
             },
                 {
                     name: 'animals',
