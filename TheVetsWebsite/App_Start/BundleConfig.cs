@@ -11,7 +11,9 @@ namespace TheVetsWebsite
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js",
                         "~/Scripts/rateyo.min.js",
-                        "~/Scripts/typeahead.bundle.js"));
+                        "~/Scripts/typeahead.bundle.js",
+                        "~/Scripts/datatables/jquery.datatables.js",
+                        "~/Scripts/datatables/datatables.bootstrap.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -29,7 +31,8 @@ namespace TheVetsWebsite
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
                       "~/Content/typeahead.css",
-                      "~/Content/rateyo.min.css"));
+                      "~/Content/rateyo.min.css",
+                      "~/Content/datatables/css/datatables.bootstrap.css"));
         }
     }
 }
